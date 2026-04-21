@@ -111,9 +111,7 @@ for i in range(interval):
         with open(out_path, 'w') as f:
             subprocess.run(['orca', inp_path], stdout=f, stderr=subprocess.STDOUT, check=False)
 
-        # ==============================
-        # CLEANUP IF ORCA SUCCESSFUL
-        # ==============================
+  
         if os.path.exists(out_path):
             with open(out_path, 'r') as f:
                 content = f.read()
